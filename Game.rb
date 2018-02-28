@@ -9,6 +9,7 @@ class Game
     @game_over = false
   end
 
+  protected
   def generate_number
     generator = Random.new
     self.num1 = generator.rand(1..20)
@@ -63,6 +64,7 @@ class Game
     end
   end
 
+  public
   def start_game(p1, p2)
     while !self.game_over
       self.generate_question
